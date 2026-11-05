@@ -1,0 +1,5 @@
+sample	type	run	raw_pairs	filtered_pairs	denoised_forward	denoised_reverse	merged	nonchimeric
+D0	sample	SRR7588938	2000	1558	1530	1545	1437	1433
+D4	sample	SRR7588942	2000	1460	1382	1418	1286	1286
+D8	sample	SRR7588945	80	72	30	59	0	0
+Blank	negative	SRR10898399	2000	1654	1407	1518	908	908
