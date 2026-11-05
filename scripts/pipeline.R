@@ -107,5 +107,5 @@ for(i in seq_len(nrow(meta))) { z<-curves[curves$sample==meta$sample[i],]; lines
 abline(v=depth,lty=2); legend('bottomright',legend=meta$sample,col=colors,lty=1);dev.off()
 write_tsv(data.frame(parameter=c('seed','depth','trimLeft_F','trimLeft_R','truncLen_F','truncLen_R','maxEE_F','maxEE_R','taxonomy_min_bootstrap','taxonomy_reference','taxonomy_reference_md5','dada2_version','control_screen'),
  value=c(seed,depth,15,15,230,140,2.5,2.5,80,basename(args[2]),unname(tools::md5sum(args[2])),as.character(packageVersion("dada2")),screen$status)),'parameters.tsv')
-writeLines(capture.output(sessionInfo()),file.path(out,'sessionInfo.txt'))
+writeLines(trimws(capture.output(sessionInfo()),which='right'),file.path(out,'sessionInfo.txt'))
 message('Completed ', nrow(counts),' samples, ',ncol(counts),' ASVs; ',sum(decisions$eligible),' eligible for diversity')
