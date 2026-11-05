@@ -1,0 +1,85 @@
+{
+  "study": "SRP155048",
+  "samples": [
+    {
+      "sample": "D0",
+      "type": "sample",
+      "run": "SRR7588938",
+      "biosample": "SAMN09710899",
+      "urls": [
+        "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR758/008/SRR7588938/SRR7588938_1.fastq.gz",
+        "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR758/008/SRR7588938/SRR7588938_2.fastq.gz"
+      ],
+      "md5": [
+        "c60128dca31d21f548c6bbb5974bf123",
+        "36e561c8a25cc1a795ebff89b56e2aea"
+      ],
+      "pairs_retained": 12000,
+      "selection": "first N pairs, no quality-based selection",
+      "subset_sha256": [
+        "affcd042097afda61a923d346c1f132aa07bd0b811066877ce6f196c6d53ead7",
+        "36cbeb038d9fb42cf65fed7c4826b419c1f818167f798c9eec60826a3394318f"
+      ]
+    },
+    {
+      "sample": "D4",
+      "type": "sample",
+      "run": "SRR7588942",
+      "biosample": "SAMN09710903",
+      "urls": [
+        "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR758/002/SRR7588942/SRR7588942_1.fastq.gz",
+        "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR758/002/SRR7588942/SRR7588942_2.fastq.gz"
+      ],
+      "md5": [
+        "fa7729e6000a9d072fbf80cd887e19bd",
+        "2b6c24b532976b00fff19e92a6595345"
+      ],
+      "pairs_retained": 12000,
+      "selection": "first N pairs, no quality-based selection",
+      "subset_sha256": [
+        "5405836a8f18389edbedbeebd6955080024859005dd5d46f10fa84b927efe09e",
+        "076754b7c2bc8e77d88368b9a8f98753e5d92475a8308cd01cc34cf4e86ee7ed"
+      ]
+    },
+    {
+      "sample": "D8",
+      "type": "sample",
+      "run": "SRR7588945",
+      "biosample": "SAMN09710907",
+      "urls": [
+        "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR758/005/SRR7588945/SRR7588945_1.fastq.gz",
+        "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR758/005/SRR7588945/SRR7588945_2.fastq.gz"
+      ],
+      "md5": [
+        "38f8e0d4729b0b665ea7ba2011673d4b",
+        "e54ce6d282458d73fefc58d71eb3ea12"
+      ],
+      "pairs_retained": 12000,
+      "selection": "first N pairs, no quality-based selection",
+      "subset_sha256": [
+        "c93027756086f448d0e72ed37c567285622e83d67bad313da3a14fca15864716",
+        "606acaaefc3ad961dd2fb8f15249e2c66c88fa5f012f814e3a793b98a5e95a98"
+      ]
+    },
+    {
+      "sample": "Blank",
+      "type": "negative",
+      "run": "SRR10898399",
+      "biosample": "SAMN13864709",
+      "urls": [
+        "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR108/099/SRR10898399/SRR10898399_1.fastq.gz",
+        "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR108/099/SRR10898399/SRR10898399_2.fastq.gz"
+      ],
+      "md5": [
+        "ef08bb49d3c64f03c0453f8f39160a6e",
+        "95df1b8df89e4f9031178923afbbd360"
+      ],
+      "pairs_retained": 12000,
+      "selection": "first N pairs, no quality-based selection",
+      "subset_sha256": [
+        "356c5acb5356a5ae00543879c911694dfb8ffe670c598a3c976e8c521e09272f",
+        "1d585bfb40b569de23846a0550bd977386fdb2db0c85d7b5bc4f521d82fc6f29"
+      ]
+    }
+  ]
+}

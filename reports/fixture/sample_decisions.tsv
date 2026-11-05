@@ -1,0 +1,5 @@
+sample	retained	eligible	status	tail_gain_fraction	rarefaction_warning
+D0	1433	TRUE	ELIGIBLE at requested depth	0	small final gain; not proof of complete coverage
+D4	1286	TRUE	ELIGIBLE at requested depth	0.000704153989382786	small final gain; not proof of complete coverage
+D8	0	FALSE	TOO SHALLOW: excluded from comparison	NA	NO RETAINED READS
+Blank	908	FALSE	CONTROL: excluded from diversity	0.000323861135770027	small final gain; not proof of complete coverage

@@ -1,0 +1,10 @@
+{
+  "samples": 4,
+  "raw_pairs": 48000,
+  "nonchimeric_pairs": 32907,
+  "asvs": 266,
+  "eligible_samples": 3,
+  "too_shallow_samples": 0,
+  "flagged_asvs": 25,
+  "depth": 5000
+}

@@ -1,0 +1,14 @@
+parameter	value
+seed	104729
+depth	5000
+trimLeft_F	15
+trimLeft_R	15
+truncLen_F	230
+truncLen_R	140
+maxEE_F	2.5
+maxEE_R	2.5
+taxonomy_min_bootstrap	80
+taxonomy_reference	rdp_train_set_18.fa.gz
+taxonomy_reference_md5	693c1ade0caf223e1fb7c6cf4da6f272
+dada2_version	1.38.0
+control_screen	screened: heuristic only, no automatic removal
