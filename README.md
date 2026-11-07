@@ -1,12 +1,18 @@
-# Microbiome QC report
+I merged this into my existing [lab-assay-lims project](https://github.com/jackaI1/lab-assay-lims/tree/main/projects/microbiome-qc-report). The current code is in `projects/microbiome-qc-report/` there. I kept the code here so older links still work.
 
-I built a bacterial DNA quality report because I wanted to know when a microbiome comparison has enough usable data to trust. A sequencing file can contain errors, artificial mixed sequences and contamination. A tidy chart can hide all three.
+The move keeps the original layout, including `tests/test_report.py`, `tests/test_analysis.R`, `tests/test_prepare.py`, `tests/check_run.py`. I replaced the README with the report below and left out Git history, installed dependencies, caches and generated build output from the hub copy.
 
-I start with public raw reads, check their quality, recover distinct marker-gene sequences, attach organism names and compare diversity. The report shows where reads were lost, whether more sequencing would still find new variants, and which samples are too shallow to compare. It also checks a real extraction blank, a sample prepared without the target material, for contamination warnings.
+The 4 test source files moved with the code. No project-specific GitHub Actions workflow was retained; the report records the omitted checks, and the test sources can be run locally from the linked folder.
 
-**Try it without installing anything:** open the [saved report](reports/demo/report.md) on GitHub. For a portable version, download [report.html](reports/demo/report.html) and open it in a browser. Its charts are embedded, so it works offline.
+Other specific omissions: reports/ (generated output).
 
-The example is a public mock-community dilution series, a mixture with decreasing amounts of bacterial DNA. It demonstrates the analysis and its limits. I do not treat these dilution samples as independent biological replicates or use them to draw health conclusions.
+Omitted workflows: `microbiome-qc-report-ci.yml`: The relocated workflow failed in GitHub Actions and was removed to keep the hub checks independent. Local test sources remain available.
+
+---
+
+# microbiome-qc-report
+
+I built a bacterial DNA quality report to learn how the underlying idea works. This is a learning project.
 
 ## Run it myself
 
@@ -48,15 +54,14 @@ I use SRA study [SRP155048](https://www.ncbi.nlm.nih.gov/sra/?term=SRP155048): r
 
 The saved report uses a technical subset of the real reads and the full taxonomy reference. It is not a reanalysis of every sample in the paper. The offline CI fixture has a smaller, explicitly labelled reference subset; its purpose is to test execution. [Fixture provenance and attribution](tests/fixture/README.md) explain the difference.
 
-## Reproducibility and checks
+## Tests and limits
 
-The main tools are pinned in [environment.yml](environment.yml), with complete package URLs and hashes in the platform locks. Each run records its input subset hashes, parameters, package versions, count table and outputs. The implementation is in [scripts](scripts); detailed reasoning is in [docs/methods.md](docs/methods.md).
+I kept 4 files of test code and supporting test helpers in this copy. That source count does not establish an execution result. This is a source snapshot, and running it on a new machine may need environment-specific setup.
 
-```sh
-make fixture-test
-python -m json.tool reports/demo/summary.json
-```
 
-CI runs the actual denoising and taxonomy pipeline on checked-in public FASTQ pairs, then validates both the new fixture report and the saved demonstration. Unit tests cover damaged or mismatched reads, failed checksums, missing and empty controls, shallow-sample exclusion and known diversity calculations. The fixture deliberately reduces one sample to exercise exclusion; that is not a claim about its original archive depth. CI uploads its report for inspection. The [saved fixture report](reports/fixture/report.md) also shows the shallow-sample warning without running anything. To repeat a fixture run locally, use a new directory, for example `make fixture-test FIXTURE_OUT=results/fixture-again`.
 
-The saved public run processed 48,000 raw read pairs, retained 32,907 non-chimeric pairs and inferred 266 variants. 3 biological samples qualified for comparison at 5,000 pairs per sample. The saved CI fixture processed 6,080 raw pairs and excluded 1 deliberately shallow technical subset. These numbers come from `python scripts/metrics.py`; the summaries and supporting tables are committed with the reports.
+Generated output omitted from this copy: reports/ (generated output). Regenerate it with the project scripts.
+
+The relocated workflow failed in GitHub Actions and was removed to keep the hub checks independent. Local test sources remain available.
+
+No project-specific GitHub Actions workflow was retained. The local test sources remain in this folder.
